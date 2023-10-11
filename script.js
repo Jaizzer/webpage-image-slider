@@ -17,8 +17,12 @@ function makeImageSlider(slider) {
         // Get index of current image.
         const currentImageIndex = images.indexOf(currentImage);
 
-        // Set the next image as the current image.
-        currentImage = images[currentImageIndex + 1];
+        // Set next current image as the first image if the current image is the last image.
+        if (currentImageIndex === images.length - 1) {
+            currentImage = images[0];
+        } else {
+            currentImage = images[currentImageIndex + 1];
+        }
         currentImage.classList.add('visible');
     });
 }
