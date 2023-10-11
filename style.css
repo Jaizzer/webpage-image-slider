@@ -1,0 +1,7 @@
+img {
+    display: none;
+}
+
+img.visible {
+    display: block;
+}
