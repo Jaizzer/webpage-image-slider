@@ -45,4 +45,7 @@ function makeImageSlider(slider) {
         }
         currentImage.classList.add('visible');
     });
+
+    // Access slider indicator.
+    const sliderIndicator = document.querySelector('.slider-indicator');
 }
