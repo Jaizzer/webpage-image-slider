@@ -9,4 +9,16 @@ function makeImageSlider(slider) {
     // Set the first image as the currently selected image by default.
     let currentImage = images[0];
     currentImage.classList.add('visible');
+
+    nextButton.addEventListener('click', () => {
+        // Hide the current image.
+        currentImage.classList.remove('visible');
+
+        // Get index of current image.
+        const currentImageIndex = images.indexOf(currentImage);
+
+        // Set the next image as the current image.
+        currentImage = images[currentImageIndex + 1];
+        currentImage.classList.add('visible');
+    });
 }
