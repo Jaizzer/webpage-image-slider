@@ -25,4 +25,8 @@ function makeImageSlider(slider) {
         }
         currentImage.classList.add('visible');
     });
+
+    // Create a copy of images and reverse the images' ordering.
+    const imagesCopy = [...images];
+    const imagesReversedOrdering = imagesCopy.reverse();
 }
