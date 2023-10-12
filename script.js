@@ -48,4 +48,19 @@ function makeImageSlider(slider) {
 
     // Access slider indicator.
     const sliderIndicator = slider.querySelector('.slider-indicator');
+
+    images.forEach((image) => {
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+
+        dot.addEventListener('click', () => {
+            // Hide the current image.
+            currentImage.classList.remove('visible');
+
+            // Set the image corresponding to the dot as visible.
+            currentImage = image;
+            currentImage.classList.add('visible');
+        });
+        sliderIndicator.appendChild(dot);
+    });
 }
