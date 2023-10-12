@@ -11,7 +11,7 @@ body {
     width: 600px;
 
     display: grid;
-    grid-template-columns: 80px 350px 80px;
+    grid-template-columns: 30px 350px 30px;
     grid-template-rows: repeat(2, auto);
 
     gap: 10px;
