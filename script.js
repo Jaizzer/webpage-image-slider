@@ -80,4 +80,7 @@ function makeImageSlider(slider) {
     nextButton.addEventListener('click', () => {
         next();
     });
+
+    // Advance the slide every 5 seconds.
+    setInterval(next, 5000);
 }
