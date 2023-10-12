@@ -9,6 +9,9 @@ function makeImageSlider(slider) {
     // Access slider indicator.
     const sliderIndicator = slider.querySelector('.slider-indicator');
 
+    // Array to store all dots inside slider indicator.
+    const dots = [];
+
     images.forEach((image) => {
         const dot = document.createElement('div');
         dot.classList.add('dot');
@@ -32,10 +35,8 @@ function makeImageSlider(slider) {
             currentImage.classList.add('visible');
         });
         sliderIndicator.appendChild(dot);
+        dots.push(dot);
     });
-
-    // Access all the dots in the slider indicator.
-    const dots = [...document.querySelectorAll('.dot')];
 
     // Set the first image as the currently selected image by default.
     let currentImage = images[0];
