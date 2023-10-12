@@ -68,4 +68,12 @@ function makeImageSlider(slider) {
         }
         currentDot.click();
     }
+
+    previousButton.addEventListener('click', () => {
+        previous();
+    });
+
+    nextButton.addEventListener('click', () => {
+        next();
+    });
 }
