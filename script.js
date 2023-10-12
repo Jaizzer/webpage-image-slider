@@ -73,4 +73,7 @@ function makeImageSlider(slider) {
         });
         sliderIndicator.appendChild(dot);
     });
+
+    // Access all the dots in the slider indicator.
+    const dots = [...document.querySelectorAll('.dot')];
 }
