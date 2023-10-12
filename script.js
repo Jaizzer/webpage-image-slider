@@ -40,6 +40,10 @@ function makeImageSlider(slider) {
             // Set the image corresponding to the dot as visible.
             currentImage = image;
             currentImage.classList.add('visible');
+
+            // If a dot is clicked, stop the auto-advance and restart it.
+            stopAutoAdvance();
+            startAutoAdvance();
         });
         sliderIndicator.appendChild(dot);
         dots.push(dot);
