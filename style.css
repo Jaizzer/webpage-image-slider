@@ -48,6 +48,8 @@ img {
 img.visible {
     display: block;
     height: 300px;
+
+    border-radius: 6px;
 }
 
 .slider-indicator {
