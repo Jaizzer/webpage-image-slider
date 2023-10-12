@@ -17,6 +17,11 @@ body {
     gap: 10px;
 }
 
+#previous:hover,
+#next:hover {
+    background-color: #e1dede;
+}
+
 #previous {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
