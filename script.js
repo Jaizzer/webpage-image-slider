@@ -74,16 +74,34 @@ function makeImageSlider(slider) {
         currentDot.click();
     }
 
+    let currentInterval;
+
+    function startAutoAdvance() {
+        currentInterval = setInterval(next, 5000);
+    }
+
+    function stopAutoAdvance() {
+        clearInterval(currentInterval);
+    }
+
     previousButton.addEventListener('click', () => {
         previous();
+
+        // If the "previous" button is clicked, stop the auto-advance and restart it.
+        stopAutoAdvance();
+        startAutoAdvance();
     });
 
     nextButton.addEventListener('click', () => {
         next();
+
+        // If the "next" button is clicked, stop the auto-advance and restart it.
+        stopAutoAdvance();
+        startAutoAdvance();
     });
 
-    // Advance the slide every 5 seconds.
-    setInterval(next, 5000);
+    // Start auto-advance initially.
+    startAutoAdvance();
 }
 
 makeImageSlider(document.querySelector('.slider'));
