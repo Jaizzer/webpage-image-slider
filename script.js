@@ -12,6 +12,8 @@ function makeImageSlider(slider) {
     // Array to store all dots inside slider indicator.
     const dots = [];
 
+    let currentDot;
+
     images.forEach((image) => {
         const dot = document.createElement('div');
         dot.classList.add('dot');
@@ -25,7 +27,8 @@ function makeImageSlider(slider) {
             }
 
             // Set the clicked dot as the current dot.
-            dot.classList.add('current-dot');
+            currentDot = dot;
+            currentDot.classList.add('current-dot');
 
             // Hide the current image.
             currentImage.classList.remove('visible');
@@ -43,7 +46,7 @@ function makeImageSlider(slider) {
     currentImage.classList.add('visible');
 
     // Set the first dost as the currently active dot by default.
-    let currentDot = dots[0];
+    currentDot = dots[0];
     currentDot.classList.add('current-dot');
 
     function next() {
