@@ -44,4 +44,16 @@ function makeImageSlider(slider) {
     // Set the first dost as the currently active dot by default.
     let currentDot = dots[0];
     currentDot.classList.add('current-dot');
+
+    function next() {
+        // Get index of current dot.
+        let indexOfCurrentDot = dots.indexOf(currentDot);
+
+        if (indexOfCurrentDot === dots.length - 1) {
+            currentDot = dots[0];
+        } else {
+            currentDot = dots[indexOfCurrentDot + 1];
+        }
+        currentDot.click();
+    }
 }
