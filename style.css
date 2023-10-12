@@ -5,3 +5,25 @@ img {
 img.visible {
     display: block;
 }
+
+.slider-indicator {
+    height: 30px;
+    width: 200px;
+
+    border: 1px solid grey;
+    border-radius: 20px;
+
+    display: grid;
+    grid-auto-flow: column;
+    align-content: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+
+    background-color: grey;
+    border-radius: 5px;
+}
