@@ -30,4 +30,8 @@ function makeImageSlider(slider) {
         dots.push(dot);
         sliderIndicator.appendChild(dot);
     });
+
+    const imagesSlides = images.map(
+        (image, index) => new ImageSlide(image, dots[index])
+    );
 }
