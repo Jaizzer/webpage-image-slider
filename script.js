@@ -6,10 +6,6 @@ function makeImageSlider(slider) {
     const previousButton = slider.querySelector('#previous');
     const nextButton = slider.querySelector('#next');
 
-    // Set the first image as the currently selected image by default.
-    let currentImage = images[0];
-    currentImage.classList.add('visible');
-
     // Access slider indicator.
     const sliderIndicator = slider.querySelector('.slider-indicator');
 
@@ -40,4 +36,8 @@ function makeImageSlider(slider) {
 
     // Access all the dots in the slider indicator.
     const dots = [...document.querySelectorAll('.dot')];
+
+    // Set the first image as the currently selected image by default.
+    let currentImage = images[0];
+    currentImage.classList.add('visible');
 }
