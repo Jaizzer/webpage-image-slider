@@ -56,4 +56,16 @@ function makeImageSlider(slider) {
         }
         currentDot.click();
     }
+
+    function previous() {
+        // Get index of current dot.
+        let indexOfCurrentDot = dots.indexOf(currentDot);
+
+        if (indexOfCurrentDot === 0) {
+            currentDot = dots[dots.length - 1];
+        } else {
+            currentDot = dots[indexOfCurrentDot - 1];
+        }
+        currentDot.click();
+    }
 }
