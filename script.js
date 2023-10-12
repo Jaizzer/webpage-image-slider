@@ -46,15 +46,16 @@ function makeImageSlider(slider) {
     });
 
     // Set the first dost as the currently active dot by default.
-    currentDot = dots[0];
+    const [firstDot] = dots;
+    currentDot = firstDot;
     currentDot.classList.add('current-dot');
 
     function next() {
         // Get index of current dot.
-        let indexOfCurrentDot = dots.indexOf(currentDot);
+        const indexOfCurrentDot = dots.indexOf(currentDot);
 
         if (indexOfCurrentDot === dots.length - 1) {
-            currentDot = dots[0];
+            currentDot = firstDot;
         } else {
             currentDot = dots[indexOfCurrentDot + 1];
         }
@@ -63,7 +64,7 @@ function makeImageSlider(slider) {
 
     function previous() {
         // Get index of current dot.
-        let indexOfCurrentDot = dots.indexOf(currentDot);
+        const indexOfCurrentDot = dots.indexOf(currentDot);
 
         if (indexOfCurrentDot === 0) {
             currentDot = dots[dots.length - 1];
