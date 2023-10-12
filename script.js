@@ -10,42 +10,6 @@ function makeImageSlider(slider) {
     let currentImage = images[0];
     currentImage.classList.add('visible');
 
-    nextButton.addEventListener('click', () => {
-        // Hide the current image.
-        currentImage.classList.remove('visible');
-
-        // Get index of current image.
-        const currentImageIndex = images.indexOf(currentImage);
-
-        // Set next current image as the first image if the current image is the last image.
-        if (currentImageIndex === images.length - 1) {
-            currentImage = images[0];
-        } else {
-            currentImage = images[currentImageIndex + 1];
-        }
-        currentImage.classList.add('visible');
-    });
-
-    // Create a copy of images and reverse the images' ordering.
-    const imagesCopy = [...images];
-    const imagesReversedOrdering = imagesCopy.reverse();
-
-    previousButton.addEventListener('click', () => {
-        // Hide the current image.
-        currentImage.classList.remove('visible');
-
-        // Get index of current image.
-        const currentImageIndex = imagesReversedOrdering.indexOf(currentImage);
-
-        // Set next current image as the first image if the current image is the last image.
-        if (currentImageIndex === imagesReversedOrdering.length - 1) {
-            currentImage = imagesReversedOrdering[0];
-        } else {
-            currentImage = imagesReversedOrdering[currentImageIndex + 1];
-        }
-        currentImage.classList.add('visible');
-    });
-
     // Access slider indicator.
     const sliderIndicator = slider.querySelector('.slider-indicator');
 
