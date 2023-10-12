@@ -85,3 +85,5 @@ function makeImageSlider(slider) {
     // Advance the slide every 5 seconds.
     setInterval(next, 5000);
 }
+
+makeImageSlider(document.querySelector('.slider'));
