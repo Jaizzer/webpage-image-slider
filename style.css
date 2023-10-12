@@ -4,6 +4,7 @@ img {
 
 img.visible {
     display: block;
+    height: 300px;
 }
 
 .slider-indicator {
