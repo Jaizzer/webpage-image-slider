@@ -54,6 +54,16 @@ function makeImageSlider(slider) {
         dot.classList.add('dot');
 
         dot.addEventListener('click', () => {
+            // Remove current-dot status of the previously clicked dot.
+            if (document.querySelector('.current-dot') !== null) {
+                document
+                    .querySelector('.current-dot')
+                    .classList.remove('current-dot');
+            }
+
+            // Set the clicked dot as the current dot.
+            dot.classList.add('current-dot');
+
             // Hide the current image.
             currentImage.classList.remove('visible');
 
