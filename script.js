@@ -40,4 +40,8 @@ function makeImageSlider(slider) {
     // Set the first image as the currently selected image by default.
     let currentImage = images[0];
     currentImage.classList.add('visible');
+
+    // Set the first dost as the currently active dot by default.
+    let currentDot = dots[0];
+    currentDot.classList.add('current-dot');
 }
