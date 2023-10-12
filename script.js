@@ -1,3 +1,20 @@
+class ImageSlide {
+    constructor(image, dot) {
+        this.image = image;
+        this.dot = dot;
+    }
+
+    setAsActive() {
+        this.image.classList.add('visible');
+        this.dot.classList.add('current-dot');
+    }
+
+    setAsInactive() {
+        this.image.classList.remove('visible');
+        this.dot.classList.remove('current-dot');
+    }
+}
+
 function makeImageSlider(slider) {
     // Save all slider's images to an array.
     const images = [...slider.querySelectorAll('img')];
