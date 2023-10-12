@@ -47,5 +47,5 @@ function makeImageSlider(slider) {
     });
 
     // Access slider indicator.
-    const sliderIndicator = document.querySelector('.slider-indicator');
+    const sliderIndicator = slider.querySelector('.slider-indicator');
 }
