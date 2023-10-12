@@ -61,7 +61,6 @@ img.visible {
     height: 30px;
     width: 200px;
 
-    border: 1px solid grey;
     border-radius: 20px;
 
     grid-column: 2 / 3;
