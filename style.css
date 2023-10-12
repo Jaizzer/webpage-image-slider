@@ -28,3 +28,7 @@ img.visible {
     background-color: grey;
     border-radius: 5px;
 }
+
+.current-dot {
+    background-color: black;
+}
