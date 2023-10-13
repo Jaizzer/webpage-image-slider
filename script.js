@@ -34,4 +34,7 @@ function makeImageSlider(slider) {
     const imagesSlides = images.map(
         (image, index) => new ImageSlide(image, dots[index])
     );
+
+    // Set the first image slide as active by default.
+    imagesSlides[0].setAsActive();
 }
