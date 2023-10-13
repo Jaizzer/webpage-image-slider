@@ -24,7 +24,7 @@ function makeImageSlider(slider) {
 
     // Create dots which corresponds to each image in the slider indicator.
     const dots = [];
-    images.forEach((image) => {
+    images.forEach(() => {
         const dot = document.createElement('div');
         dot.classList.add('dot');
         dots.push(dot);
