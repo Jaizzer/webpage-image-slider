@@ -72,24 +72,6 @@ function makeImageSlider(slider) {
         }
     }
 
-    // Add feature to dots that when clicked, will make its corresonding image slide active.
-    dots.forEach((dot) => {
-        dot.addEventListener('click', () => {
-            // Get index of current active dot since it is the same as the index of the current image slide.
-            const indexOfCurrentActiveDot = dots.indexOf(
-                slider.querySelector('.current-dot')
-            );
-
-            // Hide the current active image slide since it will be replace by a new one.
-            imagesSlides[indexOfCurrentActiveDot].setAsInactive();
-
-            // Set the new current active image slide.
-            imagesSlides
-                .find((imageSlide) => imageSlide.dot === dot)
-                .setAsActive();
-        });
-    });
-
     // Variable to store the interval ID
     let currentInterval;
 
@@ -117,5 +99,23 @@ function makeImageSlider(slider) {
         stopAutoNext();
         next();
         startAutoNext();
+    });
+
+    // Add feature to dots that when clicked, will make its corresonding image slide active.
+    dots.forEach((dot) => {
+        dot.addEventListener('click', () => {
+            // Get index of current active dot since it is the same as the index of the current image slide.
+            const indexOfCurrentActiveDot = dots.indexOf(
+                slider.querySelector('.current-dot')
+            );
+
+            // Hide the current active image slide since it will be replace by a new one.
+            imagesSlides[indexOfCurrentActiveDot].setAsInactive();
+
+            // Set the new current active image slide.
+            imagesSlides
+                .find((imageSlide) => imageSlide.dot === dot)
+                .setAsActive();
+        });
     });
 }
