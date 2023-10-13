@@ -77,7 +77,7 @@ function makeImageSlider(slider) {
 
     // Start a new interval with a 5-second delay
     function startAutoNext() {
-        currentInterval = setInterval(next, 5000);
+        currentInterval = setInterval(next, 7000);
     }
 
     // Clear the previously set interval to stop automatic action
