@@ -77,13 +77,12 @@ body {
 }
 
 img {
+    height: 600px;
     display: none;
 }
 
 img.visible {
     display: block;
-    height: 600px;
-
     border-radius: 6px;
 }
 
