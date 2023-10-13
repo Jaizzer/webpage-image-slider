@@ -122,4 +122,7 @@ function makeImageSlider(slider) {
 
         startAutoNext();
     });
+
+    // Enable auto-next feature by default.
+    startAutoNext();
 }
