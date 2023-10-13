@@ -37,4 +37,21 @@ function makeImageSlider(slider) {
 
     // Set the first image slide as active by default.
     imagesSlides[0].setAsActive();
+
+    function next() {
+        // Get index of current active dot since it is the same as the index of the current image slide.
+        const indexOfCurrentActiveDot = dots.indexOf(
+            slider.querySelector('.current-dot')
+        );
+
+        // Hide the current active image slide since it will be replace by a new one.
+        imagesSlides[indexOfCurrentActiveDot].setAsInactive();
+
+        // Set the new current active image slide.
+        if (indexOfCurrentActiveDot === dots.length - 1) {
+            imagesSlides[0].setAsActive();
+        } else {
+            imagesSlides[indexOfCurrentActiveDot + 1].setAsActive();
+        }
+    }
 }
