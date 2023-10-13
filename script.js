@@ -102,4 +102,12 @@ function makeImageSlider(slider) {
     function stopAutoNext() {
         clearInterval(currentInterval); // Clear the previously set interval to stop automatic actions
     }
+
+    // Add feature to previous button.
+    const previousButton = slider.querySelector('#previous');
+    previousButton.addEventListener('click', () => {
+        stopAutoNext();
+        previous();
+        startAutoNext();
+    });
 }
