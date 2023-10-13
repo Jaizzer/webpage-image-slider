@@ -54,4 +54,21 @@ function makeImageSlider(slider) {
             imagesSlides[indexOfCurrentActiveDot + 1].setAsActive();
         }
     }
+
+    function previous() {
+        // Get index of current active dot since it is the same as the index of the current image slide.
+        const indexOfCurrentActiveDot = dots.indexOf(
+            slider.querySelector('.current-dot')
+        );
+
+        // Hide the current active image slide since it will be replace by a new one.
+        imagesSlides[indexOfCurrentActiveDot].setAsInactive();
+
+        // Set the new current active image slide.
+        if (indexOfCurrentActiveDot === 0) {
+            imagesSlides[imagesSlides.length - 1].setAsActive();
+        } else {
+            imagesSlides[indexOfCurrentActiveDot - 1].setAsActive();
+        }
+    }
 }
