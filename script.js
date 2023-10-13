@@ -89,4 +89,17 @@ function makeImageSlider(slider) {
                 .setAsActive();
         });
     });
+
+    // Variable to store the interval ID
+    let currentInterval;
+
+    // Start a new interval with a 5-second delay
+    function startAutoNext() {
+        currentInterval = setInterval(next, 5000);
+    }
+
+    // Clear the previously set interval to stop automatic action
+    function stopAutoNext() {
+        clearInterval(currentInterval); // Clear the previously set interval to stop automatic actions
+    }
 }
