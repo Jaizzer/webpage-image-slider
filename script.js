@@ -110,4 +110,12 @@ function makeImageSlider(slider) {
         previous();
         startAutoNext();
     });
+
+    // Add feature to next button.
+    const nextButton = slider.querySelector('#next');
+    nextButton.addEventListener('click', () => {
+        stopAutoNext();
+        next();
+        startAutoNext();
+    });
 }
