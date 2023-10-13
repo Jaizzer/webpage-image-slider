@@ -104,6 +104,8 @@ function makeImageSlider(slider) {
     // Add feature to dots that when clicked, will make its corresonding image slide active.
     dots.forEach((dot) => {
         dot.addEventListener('click', () => {
+            stopAutoNext();
+
             // Get index of current active dot since it is the same as the index of the current image slide.
             const indexOfCurrentActiveDot = dots.indexOf(
                 slider.querySelector('.current-dot')
@@ -117,5 +119,7 @@ function makeImageSlider(slider) {
                 .find((imageSlide) => imageSlide.dot === dot)
                 .setAsActive();
         });
+
+        startAutoNext();
     });
 }
