@@ -126,3 +126,5 @@ function makeImageSlider(slider) {
     // Enable auto-next feature by default.
     startAutoNext();
 }
+
+makeImageSlider(document.querySelector('.slider'));
